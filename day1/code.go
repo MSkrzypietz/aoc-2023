@@ -50,10 +50,6 @@ func solvePart1() string {
 		result += int(value)
 	}
 
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
-	}
-
 	return strconv.Itoa(result)
 }
 
@@ -91,10 +87,6 @@ func solvePart2() string {
 
 		value, _ := strconv.ParseInt(calibrationValue, 10, 64)
 		result += int(value)
-	}
-
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
 	}
 
 	return strconv.Itoa(result)
