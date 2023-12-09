@@ -3,10 +3,10 @@ package almanac
 import (
 	"bufio"
 	"github.com/MSkrzypietz/aoc-2023/day5/interval"
+	"github.com/MSkrzypietz/aoc-2023/utils"
 	"io"
 	"math"
 	"sort"
-	"strconv"
 	"strings"
 )
 
@@ -31,7 +31,7 @@ func Build(r io.Reader) *Almanac {
 	scanner := bufio.NewScanner(r)
 
 	if scanner.Scan() {
-		almanac.seeds = intFields(strings.Split(scanner.Text(), ":")[1])
+		almanac.seeds = utils.IntFields(strings.Split(scanner.Text(), ":")[1])
 	}
 
 	scanner.Scan()
@@ -49,7 +49,7 @@ func Build(r io.Reader) *Almanac {
 			continue
 		}
 
-		fields := intFields(line)
+		fields := utils.IntFields(line)
 		mapEntries = append(mapEntries, MapEntry{
 			Src: fields[1],
 			Dst: fields[0],
@@ -92,15 +92,6 @@ func Build(r io.Reader) *Almanac {
 
 	almanac.mapTables = outputMapTables
 	return almanac
-}
-
-func intFields(s string) []int {
-	var result []int
-	for _, field := range strings.Fields(s) {
-		intField, _ := strconv.Atoi(field)
-		result = append(result, intField)
-	}
-	return result
 }
 
 func (a *Almanac) Seeds() []int {
