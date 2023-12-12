@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/MSkrzypietz/aoc-2023/day7/hand"
+	"github.com/MSkrzypietz/aoc-2023/day07/hand"
 	"log"
 	"os"
 	"sort"

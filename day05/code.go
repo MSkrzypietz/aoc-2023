@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/MSkrzypietz/aoc-2023/day5/almanac"
-	"github.com/MSkrzypietz/aoc-2023/day5/interval"
+	"github.com/MSkrzypietz/aoc-2023/day05/almanac"
+	"github.com/MSkrzypietz/aoc-2023/day05/interval"
 	"log"
 	"math"
 	"os"

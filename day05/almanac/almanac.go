@@ -2,7 +2,7 @@ package almanac
 
 import (
 	"bufio"
-	"github.com/MSkrzypietz/aoc-2023/day5/interval"
+	"github.com/MSkrzypietz/aoc-2023/day05/interval"
 	"github.com/MSkrzypietz/aoc-2023/utils"
 	"io"
 	"math"

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/MSkrzypietz/aoc-2023/day6/race"
+	"github.com/MSkrzypietz/aoc-2023/day06/race"
 	"log"
 	"math"
 	"os"

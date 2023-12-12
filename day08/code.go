@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/MSkrzypietz/aoc-2023/day8/network"
+	"github.com/MSkrzypietz/aoc-2023/day08/network"
 	"log"
 	"os"
 	"strconv"

@@ -7,7 +7,6 @@ import (
 	"log"
 	"os"
 	"os/exec"
-	"strconv"
 )
 
 func main() {
@@ -37,7 +36,7 @@ func main() {
 func generateDay(day int) {
 	fmt.Printf("Generating files for day %d...\n", day)
 
-	dir := "day" + strconv.Itoa(day)
+	dir := fmt.Sprintf("day%02d", day)
 	if err := os.Mkdir(dir, os.ModePerm); err != nil {
 		log.Fatal("error creating the day's directory: ", err)
 	}
@@ -70,9 +69,9 @@ func generateDay(day int) {
 }
 
 func executeDay(day int) {
-	cmd := exec.Command("go", "run", fmt.Sprintf("day%d/code.go", day))
+	cmd := exec.Command("go", "run", fmt.Sprintf("day%02d/code.go", day))
 	cmd.Env = os.Environ()
-	cmd.Env = append(cmd.Env, fmt.Sprintf("DAY=%d", day))
+	cmd.Env = append(cmd.Env, fmt.Sprintf("DAY=%02d", day))
 
 	stdout, err := cmd.Output()
 	if err != nil {

@@ -1,7 +1,7 @@
 package hand
 
 import (
-	"github.com/MSkrzypietz/aoc-2023/day7/card"
+	"github.com/MSkrzypietz/aoc-2023/day07/card"
 )
 
 type Hand struct {
